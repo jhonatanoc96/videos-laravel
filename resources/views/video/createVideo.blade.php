@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container">
-    
+
     <div class="">
         <h2>Crear un nuevo vídeo</h2>
         <hr>
-        <form action="{{ route('saveVideo') }}" method="post" enctype="multipart/form-data" class="col-lg-7">
+        <form action="{{ route('saveVideo') }}" method="post" enctype="multipart/form-data" class="col-lg-6">
             {{csrf_field()}}
 
             @if ($errors->any())
@@ -20,23 +20,23 @@
             @endif
 
             <div class="form-group">
-                <label for="title">Título</label>
-                <input type="text" name="title" id="title" value="{{old('title')}}" />
+                <label for="title" class="col">Título</label>
+                <input type="text" class="col" name="title" id="title" value="{{ old('title') }}" />
             </div>
 
             <div class="form-group">
-                <label for="description">Descripción</label>
-                <textarea type="text" name="description" id="description" value="{{old('description')}}"></textarea>
+                <label for="description" class="col">Descripción</label>
+                <textarea type="text" class="col" name="description" id="description">{{ old('description') }}</textarea>
             </div>
 
             <div class="form-group">
-                <label for="image">Miniatura</label>
-                <input type="file" name="image" id="image"></textarea>
+                <label for="image" class="col">Miniatura</label>
+                <input type="file" class="col" name="image" id="image"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="video">Archivo de vídeo</label>
-                <input type="file" name="video" id="video"></textarea>
+                <label for="video" class="col">Archivo de vídeo</label>
+                <input type="file" class="col" name="video" id="video"></textarea>
             </div>
 
             <button type="submit" class="btn btn-success">Crear vídeo</button>
