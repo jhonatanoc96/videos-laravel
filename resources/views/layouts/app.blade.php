@@ -42,7 +42,10 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Videos Laravel
                 </a>
-                <form class="navbar-form navbar-left" role="search" action="">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    Inicio
+                </a>
+                <form class="navbar-form navbar-left" role="search" action="{{url('/buscar')}}">
                     <div class="navbar-brand">
                         <input type="text" class="form-control" placeholder="¿Qué quieres ver?" name="search">
                     </div>
@@ -102,6 +105,11 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="col-md-10 col-md-offset-1">
+            <hr />
+            <p> Videos Laravel - Jhonatan Ocampo Arias</p>
+        </footer>
     </div>
 </body>
 

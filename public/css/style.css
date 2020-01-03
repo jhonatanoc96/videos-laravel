@@ -7,13 +7,20 @@ body{
 }
 
 .video-image-mask{
-    width: 185px;
+    width: 100%;
     height: 100px;
     overflow: hidden;
 }
 
+.video-image-mask-edit{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .video-image-mask .video-image{
-    width: 105px;
+    /* width: 105px; */
+    width: 100%;
 }
 
 .video-title{
@@ -24,4 +31,9 @@ body{
 
 .video-title a{
     color: #444;
+}
+
+.btn-filter {
+    display: block;
+    margin-top: 5px;
 }
