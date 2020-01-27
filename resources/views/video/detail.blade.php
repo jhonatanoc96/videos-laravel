@@ -5,6 +5,7 @@
     <h2>{{$video->title}}</h2>
     <hr />
 
+    @if(Storage::disk('videos')->has($video->video_path))
     <div class="col-md-8">
         <!-- video -->
         <video controls id="video-player" src="{{ route('fileVideo', ['filename' => $video->video_path]) }}">
@@ -32,6 +33,7 @@
         @include('video.comments')
 
     </div>
+    @endif
 
 </div>
 

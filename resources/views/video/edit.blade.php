@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+
     <div class="col-lg-6">
         <h2>Editar {{$video->title}}</h2>
         <hr>
@@ -42,9 +43,11 @@
 
             <div class="form-group">
                 <label for="video" class="col">Archivo de vídeo</label>
+                @if(Storage::disk('videos')->has($video->video_path))
                 <video controls id="video-player" src="{{ route('fileVideo', ['filename' => $video->video_path]) }}">
                     Tu navegador no es compatible con HTML5
                 </video>
+                @endif
                 <input type="file" class="col" name="video" id="video"></textarea>
             </div>
 
