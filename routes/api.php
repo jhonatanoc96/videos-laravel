@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
+/*
+----- RECORDAR QUE AQUI SE PUEDEN ESTABLECER RUTAS PARA API Y NO WEB -------
+*/
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
